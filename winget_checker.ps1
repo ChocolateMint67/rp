@@ -3,7 +3,7 @@ $installed = (Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\U
 
 If(-Not $installed) {
 	Write-Host "'$software' nu este instalat, il vom instala acum...";
-  powershell Invoke-WebRequest https://git.io/J9shP -O %temp%\winget_downloader.ps1
+  powershell Invoke-WebRequest https://git.io/J9shP -O winget_downloader.ps1
 } else {
 	Write-Host "'$software' este instalat, continuam..."
 }
